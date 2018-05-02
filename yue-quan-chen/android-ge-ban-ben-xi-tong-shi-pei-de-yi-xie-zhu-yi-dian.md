@@ -7,7 +7,7 @@
 
 - 权限
 	- 运行时危险权限需要在使用到改权限时动态申请
-	- ![这里写图片描述](https://img-blog.csdn.net/20180427163710999?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1l1ZXF1bmNoZW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+	- ![](/assets/20180427163710999.png)
 
 #### 7.0
 
