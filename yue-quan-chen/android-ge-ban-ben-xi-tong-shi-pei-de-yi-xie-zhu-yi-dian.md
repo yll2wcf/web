@@ -3,6 +3,7 @@
 - 通知栏
 	- 使用appcompat-v7库中提供NotificationCompat.Builder替换Notification.Builder
 	- setSmallIcon图片资源只使用alpha图层来进行绘制，而不应该包括RGB图层。换句话说就是图片不能有背景色 ，颜色可以通过setColor设置
+	
 #### 6.0
 
 - 权限
