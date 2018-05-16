@@ -13,13 +13,16 @@ RecyclerView(四级缓存)：
 ListView和RecyclerView缓存机制基本一致：
 
 1). mActiveViews和mAttachedScrap功能相似，意义在于快速重用屏幕上可见的列表项ItemView，而不需要重新createView和bindView；
+
 2). mScrapView和mCachedViews + mReyclerViewPool功能相似，意义在于缓存离开屏幕的ItemView，目的是让即将进入屏幕的ItemView重用.
+
 3). RecyclerView的优势在于a.mCacheViews的使用，可以做到屏幕外的列表项ItemView进入屏幕内时也无须bindView快速重用；b.mRecyclerPool可以供多个RecyclerView共同使用，在特定场景下，如viewpaper+多个列表页下有优势.客观来说，RecyclerView在特定场景下对ListView的缓存机制做了补强和完善。
 
 #### 2. 缓存不同
 
 1). RecyclerView缓存RecyclerView.ViewHolder，抽象可理解为：
 View + ViewHolder(避免每次createView时调用findViewById) + flag(标识状态)；
+
 2). ListView缓存View。
 
 缓存不同，二者在缓存的使用上也略有差别，具体来说：
