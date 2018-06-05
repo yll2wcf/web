@@ -204,6 +204,7 @@ if let two = twoStruct {
 ##### 2.4  可选类型在错误处理中使用（try!与try?）
 >1.try?会将错误转换为可选值，当调用try?＋函数或方法语句时候，如果函数或方法抛出错误，程序不会发崩溃，而返回一个nil，如果没有抛出错误则返回可选值。
 2.使用try!可以打破错误传播链条。错误抛出后传播给它的调用者，这样就形成了一个传播链条，但有的时候确实不想让错误传播下去，可以使用try!语句
+
 ```
 let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")
 // 上述语句中在执行loadImage方法时如果执行失败，使用try!来禁用错误传递，会有运行错误导致App崩溃
