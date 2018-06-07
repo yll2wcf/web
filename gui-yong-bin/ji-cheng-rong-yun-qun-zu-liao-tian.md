@@ -8,3 +8,5 @@
                     .appendQueryParameter(Conversation.ConversationType.PRIVATE.getName(), "false") //设置私聊会话是否聚合显示
                     .appendQueryParameter(Conversation.ConversationType.GROUP.getName(), "false")     .build();//群组
                     
+   
+                    

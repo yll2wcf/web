@@ -370,6 +370,36 @@ RongIM.getInstance().addUnReadMessageCountChangedObserver(mTagUnread, Conversati
         
     
 ```
+>>会话界面操作监听：
+···java
+
+  RongIM.setConversationListBehaviorListener(new RongIM.ConversationListBehaviorListener() {
+          
+            
+                @Override
+            public boolean onConversationPortraitClick(Context context,  Conversation.ConversationType conversationType, String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onConversationPortraitLongClick(Context context, Conversation.ConversationType conversationType, String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onConversationLongClick(Context context, View view, UIConversation uiConversation) {
+                return false;
+            }
+
+            @Override
+            public boolean onConversationClick(Context context, View view, UIConversation uiConversation) {
+                return false;
+            }
+        });
+        ····
+
+
+
 
 
 
