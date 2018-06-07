@@ -2,7 +2,30 @@
 ##集成融云
 在“打卡助手”APP中集成了即时通讯功能，采用了来自融云的第三方技术。
 >>集成融云即时通讯的步骤：
-   首先从融云官网注册账号，注册你的APP并且获取一个APP key和APP Secret。然后下载融云的sdk，并依赖到项目里来。融云的sdk，有4个主要的module: IMKit, IMLib ,CallKit, CallLib。在本项目中我们主要使用了前两个module，暂时可以满足当前的需求。此外融云还提供了一些so文件，小米推送jar包，高德地图的jar包。为了能准确接到消息推送请务必兴建asset目录，并在asset下放入push_daemon（推送守护）中的相关文件。以上准备工作在照着官网步骤即可完成，在这里主要说说曾经遇到的问题。曾经没有添加高德地图jar包，在聊天的底部面板就没有出现发送定位的功能，添加上后默认出现发送定位。其次配置Manifest文件和相关的Activity，Receiver。在application里面初始化融云。这一步照着官网来。但是这里我遇到了跟原来的fileProvider冲突的问题。自己原来的android:resource="@xml/rc_file_path"和通云IMKit里的文件冲突。我这次采取的办法是使用自己的file_path,添加融云的 <external-path></ external-path>。
+   首先从融云官网注册账号，注册你的APP并且获取一个APP key和APP Secret。然后下载融云的sdk，并依赖到项目里来。融云的sdk，有4个主要的module: IMKit, IMLib ,CallKit, CallLib。在本项目中我们主要使用了前两个module，暂时可以满足当前的需求。此外融云还提供了一些so文件，小米推送jar包，高德地图的jar包。为了能准确接到消息推送请务必兴建asset目录，并在asset下放入push_daemon（推送守护）中的相关文件。以上准备工作在照着官网步骤即可完成，在这里主要说说曾经遇到的问题。曾经没有添加高德地图jar包，在聊天的底部面板就没有出现发送定位的功能，添加上后默认出现发送定位。其次配置Manifest文件和相关的Activity，Receiver。在application里面初始化融云。这一步照着官网来。但是这里我遇到了跟原来的fileProvider冲突的问题。自己原来的android:resource="@xml/rc_file_path"和通云IMKit里的文件冲突。
+   采取的办法： xml文件夹下放上融云的file_path 和 自己原来的，在AndroidManifest.xml里做如下配置
+    <provider
+            android:name=".ui.provider.DakaFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <!-- 融云 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path"/>
+        </provider>
+   
+   
+   
 接下来开始相关代码的编写。首先进行融云的连接，RongIM.connect(token, new RongIMClient.ConnectCallback(){}); 
 
 然后给融云提供通讯录里的联系人。融云提供了2种方式，这里我们介绍第一种方式
