@@ -49,7 +49,7 @@
    
 >>群组@别人
 
-把这个方法在ConversationActivity的oncreate()里。这个是用来请求群组里的全部联系人，
+打卡助手里把这个方法 放在ConversationActivity的oncreate()里就可以了。这个是用来请求群组里的全部联系人，并设置给融云的，还有对应的点击事件
 
 
 ```java
@@ -58,7 +58,7 @@ private void setGroupMemberProvider() {
 
         if (mConversationType.equals(Conversation.ConversationType.GROUP)) {
             final ArrayList<UserInfo> userInfos = new ArrayList<>();
-            final ArrayList<Friend> friends = new ArrayList<>();
+
 
             ApiRequestManager.createApi().getGroupInfo(mTargetId)
                     .compose(ApiRequestManager.<GroupChatDetailInfo>applySchedulers())
@@ -72,8 +72,8 @@ private void setGroupMemberProvider() {
                                 for (int i = 0; i < users.size(); i++) {
                                     GroupChatDetailInfo.DataBean.UsersBean user = users.get(i);
                                     UserInfo userInfo = new UserInfo(user.getEmployee_id(), user.getName(), Uri.parse(user.getPortraitUri()));
-                                    Friend friend = new Friend(user.getEmployee_id(), user.getName(), user.getPhoto(), user.getPortraitUri());
-                                    friends.add(friend);
+                         
+                                
                                     userInfos.add(userInfo);
                                 }
 
@@ -109,7 +109,7 @@ private void setGroupMemberProvider() {
 
 ```
 
-请求到之后设置给融云
+请求到之后设置给融云,用的是下面这个方法。
 ```java
   
     RongIM.getInstance().setGroupMembersProvider(new RongIM.IGroupMembersProvider() {
@@ -120,6 +120,21 @@ private void setGroupMemberProvider() {
                             });
 
 ```
+如果希望跳转到自己定义要@别的联系人列表。开启自定义的时候，一定要返回true。默认的是返回false,会跳转到融云默认的界面里选择联系人。
+```java
+RongMentionManager.getInstance().setMentionedInputListener(new IMentionedInputListener() {
+                @Override
+                public boolean onMentionedInput(Conversation.ConversationType conversationType, String s) {
+                    Intent intent = new Intent(ConversationActivity.this, ShowGroupMembersToAtActivity.class);
+
+                    intent.putParcelableArrayListExtra("group_members", friends);
+
+                    startActivity(intent);
+                    return true;
+                }
+            });
+            ```
+
 
 
 
