@@ -16,5 +16,7 @@
 * [孙家宇](sun-jia-yu.md)
 * [贵永斌](gui-yong-bin.md)
   * [集成融云](gui-yong-bin/ji-cheng-rong-yun.md)
+  * [集成融云群组聊天](gui-yong-bin/ji-cheng-rong-yun-qun-zu-liao-tian.md)
+  * [融云推送的集成](gui-yong-bin/rong-yun-tui-song-de-ji-cheng.md)
 * [孙明丽](sun-ming-li.md)
 

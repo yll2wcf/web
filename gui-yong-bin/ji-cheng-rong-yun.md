@@ -367,4 +367,11 @@ RongIM.getInstance().addUnReadMessageCountChangedObserver(mTagUnread, Conversati
         Conversation.ConversationType.GROUP,
         Conversation.ConversationType.PUBLIC_SERVICE,
         Conversation.ConversationType.APP_PUBLIC_SERVICE);
+        
+    
 ```
+
+
+
+
+
