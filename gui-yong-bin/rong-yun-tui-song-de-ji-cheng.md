@@ -2,8 +2,10 @@
 
 在Application的onCreate里
 注册华为和小米推送
+```java
             RongPushClient.registerHWPush(this);
             RongPushClient.registerMiPush(this, "12321321312321", "23123123123");
+```
 写在初始化融云之前。
 
 在配置清单里配置：
@@ -140,8 +142,7 @@
             </intent-filter>
         </receiver>
 ```      
-```    
-        
+```java      
 public class RongYunNotificationReceiver extends PushMessageReceiver {
     @Override
     public boolean onNotificationMessageArrived(Context context, PushNotificationMessage message) {

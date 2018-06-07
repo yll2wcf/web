@@ -371,7 +371,8 @@ RongIM.getInstance().addUnReadMessageCountChangedObserver(mTagUnread, Conversati
     
 ```
 >>会话界面操作监听：
-···java
+```java
+
 
   RongIM.setConversationListBehaviorListener(new RongIM.ConversationListBehaviorListener() {
           
@@ -396,7 +397,7 @@ RongIM.getInstance().addUnReadMessageCountChangedObserver(mTagUnread, Conversati
                 return false;
             }
         });
-        ····
+```
 
 
 
