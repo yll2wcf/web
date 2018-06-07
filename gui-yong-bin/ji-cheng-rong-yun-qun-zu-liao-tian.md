@@ -48,7 +48,8 @@
 ```
    
 >>群组@别人
-
+首先在rc_config.xml 里开启@功能 <bool name="rc_enable_mentioned_message">true</bool>
+其次要给融云设置当前群组的联系人
 打卡助手里把这个方法 放在ConversationActivity的oncreate()里就可以了。这个是用来请求群组里的全部联系人，并设置给融云的，还有对应的点击事件
 
 
@@ -73,7 +74,7 @@ private void setGroupMemberProvider() {
                                     GroupChatDetailInfo.DataBean.UsersBean user = users.get(i);
                                     UserInfo userInfo = new UserInfo(user.getEmployee_id(), user.getName(), Uri.parse(user.getPortraitUri()));
                          
-                                
+                        
                                     userInfos.add(userInfo);
                                 }
 
@@ -100,11 +101,7 @@ private void setGroupMemberProvider() {
                     return true;
                 }
             });
-
-
         }
-
-
     }
 
 ```
@@ -118,7 +115,6 @@ private void setGroupMemberProvider() {
                                     callback.onGetGroupMembersResult(userInfos);
                                 }
                             });
-
 ```
 如果希望跳转到自己定义要@别的联系人列表。开启自定义的时候，一定要返回true。默认的是返回false,会跳转到融云默认的界面里选择联系人。
 ```java
@@ -127,13 +123,13 @@ RongMentionManager.getInstance().setMentionedInputListener(new IMentionedInputLi
                 public boolean onMentionedInput(Conversation.ConversationType conversationType, String s) {
                     Intent intent = new Intent(ConversationActivity.this, ShowGroupMembersToAtActivity.class);
 
-                    intent.putParcelableArrayListExtra("group_members", friends);
+      
 
                     startActivity(intent);
                     return true;
                 }
             });
-            ```
+```
 
 
 
