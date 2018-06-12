@@ -22,6 +22,6 @@
   * [React Native学习笔记（一）—— React Native环境安装与应用创建](sun-mingli-li/React-Native-Learning-Notes-1.md)
   * [React Native 学习笔记(二) —— React Native的基础概念](sun-mingli-li/React-Native-Learning-Notes-2.md)
   * [React Native学习笔记（三）—— 模拟器的安装与代码调试](sun-mingli-li/React-Native-Learning-Notes-3.md)
-  * [React Native学习笔记（四）—— 打包ipa](sun-mmingli-li/React-Native-Learning-Notes-4.md)
+  * [React Native学习笔记（四）—— 打包ipa](sun-mingli-li/React-Native-Learning-Notes-4.md)
   * [码率（Bitrate）、帧数（FPS）、分辨率在视频传输中的含义及其影响](sun-mingli-li/Bitrate-FPS-Resolution-in-Video-Transimition.md)
 
