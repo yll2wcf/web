@@ -14,6 +14,7 @@ React的代码其实就是将html和JS结合起来使用，它所使用的语法
 
 ![image](http://upload-images.jianshu.io/upload_images/12092998-e85dd974d61eacd4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+
 2.组件(componets)
 
 a. React Native跟React不同，React直接使用的是 web组件，React Native是使用的是iOS或者Andriod的原生组件。在[http://facebook.github.io/react-native/docs/getting-started.html](http://facebook.github.io/react-native/docs/getting-started.html)中的Components章节，我们可以查询到React native提供的组件，例如Button中就包含了如下内容：
