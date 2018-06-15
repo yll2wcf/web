@@ -24,4 +24,5 @@
   * [React Native学习笔记（三）—— 模拟器的安装与代码调试](sun-mingli-li/React-Native-Learning-Notes-3.md)
   * [React Native学习笔记（四）—— 打包ipa](sun-mingli-li/React-Native-Learning-Notes-4.md)
   * [码率（Bitrate）、帧数（FPS）、分辨率在视频传输中的含义及其影响](sun-mingli-li/Bitrate-FPS-Resolution-in-Video-Transimition.md)
+  * [深入浅出了解frame和bounds](sun-ming-li/learning-frame-and-bounds.md)
 
