@@ -6,8 +6,7 @@ Xcode的项目导航视图中的PROJECT下选择你的项目，选择Info页签 
 ![](/assets/屏幕快照 2018-06-19 下午2.13.41.png)
 
 
-* 
-选择Build Settings tab，搜索Build Location -> Per-configuration Build Products Path -> Staging，将之前的值：$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) 改为：$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)
+*  选择Build Settings tab，搜索Build Location -> Per-configuration Build Products Path -> Staging，将之前的值：$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) 改为：$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)
 
 ![](/assets/屏幕快照 2018-06-19 下午2.17.59.png)
 
