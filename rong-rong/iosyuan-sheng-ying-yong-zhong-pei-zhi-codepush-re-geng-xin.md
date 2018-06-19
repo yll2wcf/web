@@ -10,7 +10,7 @@ Xcode的项目导航视图中的PROJECT下选择你的项目，选择Info页签 
 
 ![](/assets/屏幕快照 2018-06-19 下午2.17.59.png)
 
-*选择Build Settings tab，点击 + 号，选择Add User-Defined Setting，将key设置为CODEPUSH_KEY，Release 和 Staging的值为前面创建的key，直接输入对应的key值
+* 选择Build Settings tab，点击 + 号，选择Add User-Defined Setting，将key设置为CODEPUSH_KEY，Release 和 Staging的值为前面创建的key，直接输入对应的key值
 
 ![](/assets/屏幕快照 2018-06-19 下午2.20.26.png)
 
@@ -21,4 +21,4 @@ Xcode的项目导航视图中的PROJECT下选择你的项目，选择Info页签 
 至此，iOS平台CodePush环境集成完毕。
 
 **注意**
-集成之后
+集成之后iOS打静态包的时候需要命名为 main.jsbundle 
