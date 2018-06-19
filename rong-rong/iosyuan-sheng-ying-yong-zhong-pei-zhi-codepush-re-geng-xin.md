@@ -1,5 +1,8 @@
 ###iOS原生应用中配置CodePush热更新
-Xcode的项目导航视图中的PROJECT下选择你的项目，选择Info页签 ，在Configurations节点下单击 + 按钮 ，选择Duplicate "Release Configaration，输入Staging
+
+iOS集成CorePush配置前需要在RN项目中先行集成CodePush插件，然后才可进行配置，具体分为以下4个步骤：
+
+* Xcode的项目导航视图中的PROJECT下选择你的项目，选择Info页签 ，在Configurations节点下单击 + 按钮 ，选择Duplicate "Release Configaration，输入Staging
 ![](/assets/088714c0-331c-11e6-9504-5469d9a59d74.png)
 完成后效果如下图：
 
