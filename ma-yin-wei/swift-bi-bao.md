@@ -1,4 +1,5 @@
->在OC中存储一段代码块可以使用Block，而对于Swift中也有相应的对照用于存储代码块这个就是今天所说的闭包，在其它语言中也叫匿名函数。
+>前言
+在OC中存储一段代码块可以使用Block，而对于Swift中也有相应的对照用于存储代码块这个就是今天所说的闭包，在其它语言中也叫匿名函数。
 
 <div align=center>![](https://user-gold-cdn.xitu.io/2018/6/5/163cec66615fb934?w=600&h=336&f=jpeg&s=7352)
 
@@ -197,7 +198,8 @@ func serve(customer customerProvider: @autoclosure () -> String) {
 serve(customer: customersInLine.remove(at: 0))
 // 打印 "Now serving Ewa!"
 ```
->注意 过度使用 autoclosures 会让你的代码变得难以理解。上下文和函数名应该能够清晰地表明求值是被延迟执行的。
+>注意 
+过度使用 autoclosures 会让你的代码变得难以理解。上下文和函数名应该能够清晰地表明求值是被延迟执行的。
 
 如果你想让一个自动闭包可以“逃逸”，则应该同时使用 `@autoclosure` 和 `@escaping` 属性
 
