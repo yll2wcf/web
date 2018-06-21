@@ -20,17 +20,33 @@ a. React Native跟React不同，React直接使用的是 web组件，React Native
 
 （1）首先介绍了UIButton适用的平台：Button适用于ios和安卓平台
 
-A basic button component that should render nicely on any platform. 
+A basic button component that should render nicely on any platform.
 
 有一些控件只适用于iOS平台或者安卓平台，如DatePickerIOS、DrawerLayoutAndroid。
 
 （2）接着介绍了UIButton提供的几种样式：Simple Button、Adjusted color、Fit to textlayout、Disabled Button如何使用，以及分别在ios和Android平台上呈现的样式。
 
-（3）接着介绍了如果RN提供的Button组件不满足需要可以使用[TouchableOpacity](https://link.jianshu.com/?t=http%3A%2F%2Ffacebook.github.io%2Freact-native%2Fdocs%2Ftouchableopacity.html) or [TouchableNativeFeedback](https://link.jianshu.com/?t=http%3A%2F%2Ffacebook.github.io%2Freact-native%2Fdocs%2Ftouchablenativefeedback.html) 自定义Button。
+（3）接着介绍了如果RN提供的Button组件不满足需要可以使用[TouchableOpacity](https://link.jianshu.com/?t=http%3A%2F%2Ffacebook.github.io%2Freact-native%2Fdocs%2Ftouchableopacity.html) or [TouchableNativeFeedback](https://link.jianshu.com/?t=http%3A%2F%2Ffacebook.github.io%2Freact-native%2Fdocs%2Ftouchablenativefeedback.html) 自定义Button。
 
 （4）接着介绍了使用Button的代码、属性、以及属性的赋值类型。
 
-![](/assets/2.png)
+![](/assets/2.png)b. 我们还可以自定义组件，例如下面代码就定义了一个 HelloWorldApp组件，我们可以将HelloWorldApp组件放置到任何需要显示Hello world！文本的地方。
 
+![](/assets/3.png)
+
+### 3.状态\(state\)
+
+在RN中有两种数据可以控制一个控件显示不同的nr：props 和state。
+
+props是由伏组件给自组件赋的值，在组件的生命周期中是固定的。对于变化的数据我们就要使用State了。
+
+通常我们在构造方法（constructor）中初始化一个statte，调用setState方法来改变state的值。
+
+假如我们需要制作一段不停闪烁的文字。文字内容本身在组件创建时就已经指定好了，所以文字内容应该是一个prop。而文字的显示或隐藏的状态（快速的显隐切换就产生了闪烁的效果）则是随着时间变化的，因此这一状态应该写到state中。代码如下：
+
+![](/assets/4.png)  
+![](/assets/5.png)
+
+  
 
 
