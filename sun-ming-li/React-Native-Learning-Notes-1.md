@@ -4,7 +4,7 @@ RN官方网站：
 
 英文网站：https://facebook.github.io/react-native/docs/getting-started.html
 
-1.React native介绍
+## 1.React native介绍
 
 （1）概念：React Native简称RN是Facebook2015年发布的跨平台开发框架，它的设计理念是：使用React Native开发，既拥有Native的良好人机交互体验，又保留了React的开发效率。
 
@@ -16,7 +16,7 @@ RN官方网站：
 
 支持混合开发，原生代码可以和RN实现双向通讯。
 
-2.搭建开发环境
+## 2.搭建开发环境
 
 https://facebook.github.io/react-native/docs/getting-started.html
 
@@ -34,15 +34,15 @@ React Native目前需要NodeJS 5.0或更高版本，用来执行npm命令，安�
 
 (3)React Native的命令行工具（react-native-cli）
 
-**(4)xcode**
+(4)xcode
 
-**(5)**Watchman [Watchman](https://facebook.github.io/watchman/docs/install.html)是由Facebook提供的监视文件系统变更的工具。安装此工具可以提高开发时的性能（packager可以快速捕捉文件的变化从而实现实时刷新）。译注：此工具官方虽然是推荐安装，但在实践中，我们认为此工具是必须安装，否则可能无法正常开发。
+(5)Watchman [Watchman](https://facebook.github.io/watchman/docs/install.html)是由Facebook提供的监视文件系统变更的工具。安装此工具可以提高开发时的性能（packager可以快速捕捉文件的变化从而实现实时刷新）。译注：此工具官方虽然是推荐安装，但在实践中，我们认为此工具是必须安装，否则可能无法正常开发。
 
 (6)安装[WebStorm](https://www.jetbrains.com/webstorm/)来编写React Native应用
 
 andriod开发需要安装JDK8、Android Studio
 
-3\. 创建项目
+## 3\. 创建项目
 
 （1）打开命令行执行react-native init TShop -version 0.55 就创建了一个RN项目，名称是Tshop，版本号可以不加，默认是最新版本。
 
