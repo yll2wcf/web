@@ -88,10 +88,7 @@ style={{width:193, height:110}}两个{}含义是里面的{width:193, height:110}
 b. 我们也可以为自定义的组件添加属性，例如上面的HelloWorldApp组件，只是固定显示Hello World！如果我们给这个组件添加一个属性 name，当我们在父组件中为HelloWorldApp组件的name属性赋值为“小明”时，就可以显示成Hello 小明！
 
 代码如下，使用和赋值一个属性就相当于定义了以props，就是这么简单，但是请注意props不可以被修改，是不可变变量。可变的变量就要使用state了。
-
-  
 ![](/assets/7.png)
-![](/assets/8.png)
 
   
 
