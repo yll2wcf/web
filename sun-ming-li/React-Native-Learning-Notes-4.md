@@ -1,6 +1,6 @@
 本片将文章介绍了将React Native项目打包ipa的过程。
 
-1. ##### 打开React Native项目文件，在根目录下找到package.json文件，打开在 "scripts"加入生成ios bundle资源文件的指令：
+##### 1. 打开React Native项目文件，在根目录下找到package.json文件，打开在 "scripts"加入生成ios bundle资源文件的指令：
 
 "bundle-ios":"react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ./ios/bundle/index.ios.jsbundle --assets-dest ./ios/bundle"
 
