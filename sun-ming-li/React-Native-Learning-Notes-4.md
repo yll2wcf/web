@@ -16,6 +16,7 @@
 
 ![](/assets/11.png)
 
+
 ##### 2.在React Native项目ios文件夹下创建一个空的bundle文件夹，如果之前打过包不是空的最好清空一下。
 
 ##### 3.打开终端进入到React Native项目的跟路径下，执行npm run bundle-ios命令，执行成功后生成如下三个文件
