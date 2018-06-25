@@ -123,7 +123,7 @@ var Photo = React.createClass\({
 
    ...
 
-}\); 
+}\);
 ```
 
 b. 在ES6里，我们通过定义一个继承自React.Component的class来定义一个组件类，代码：
@@ -135,7 +135,7 @@ class Photo extends React.Component {
 
      ...
 
-} 
+}
 ```
 
 #### \(4\) 给组件定义方法
@@ -610,7 +610,7 @@ return &lt;div className={this.props.className}&gt;foo&lt;/div&gt;;
 
 然而现在官方已经不再打算在ES6里继续推行Mixin，他们说：\[Mixins Are Dead. Long Live Composition\]\([https://medium.com/@dan\_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750\)。](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750%29。)
 
-尽管如果要继续使用mixin，还是有一些第三方的方案可以用，譬如\[这个方案\]\([https://github.com/brigand/react-mixin\](https://github.com/brigand/react-mixin\)\)
+尽管如果要继续使用mixin，还是有一些第三方的方案可以用，譬如\[这个方案\]\([https://github.com/brigand/react-mixin\](https://github.com/brigand/react-mixin%29\)
 
 不过官方推荐，对于库编写者而言，应当尽快放弃Mixin的编写方式，上文中提到\[Sebastian Markbåge\]\([https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775\)的一段代码推荐了一种新的编码方式：](https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775%29的一段代码推荐了一种新的编码方式：)
 
@@ -674,7 +674,7 @@ export default Enhance\(MyComponent\); // Enhanced component
 
 #### \(9\) ES6+带来的其它好处
 
-#####  解构&属性延展
+##### 解构&属性延展
 
 结合使用ES6+的解构和属性延展，我们给孩子传递一批属性更为方便了。这个例子把className以外的所有属性传递给div标签：
 
@@ -740,11 +740,11 @@ render\(\) {
 
 \`\`\`
 
-\#\#\#参考资料
+##### 参考资料
 
-\[[https://blog.csdn.net/qtwwyl/article/details/76285270\]\(https://blog.csdn.net/qtwwyl/article/details/76285270\](https://blog.csdn.net/qtwwyl/article/details/76285270]%28https://blog.csdn.net/qtwwyl/article/details/76285270\)\)
+\[[https://blog.csdn.net/qtwwyl/article/details/76285270\]\(https://blog.csdn.net/qtwwyl/article/details/76285270\](https://blog.csdn.net/qtwwyl/article/details/76285270]%28https://blog.csdn.net/qtwwyl/article/details/76285270%29\)
 
-\[[https://blog.csdn.net/wbiokr/article/details/73027398?utm\_source=itdadao&utm\_medium=referral\]\(https://blog.csdn.net/wbiokr/article/details/73027398?utm\_source=itdadao&utm\_medium=referral\](https://blog.csdn.net/wbiokr/article/details/73027398?utm_source=itdadao&utm_medium=referral]%28https://blog.csdn.net/wbiokr/article/details/73027398?utm_source=itdadao&utm_medium=referral\)\)
+\[[https://blog.csdn.net/wbiokr/article/details/73027398?utm\_source=itdadao&utm\_medium=referral\]\(https://blog.csdn.net/wbiokr/article/details/73027398?utm\_source=itdadao&utm\_medium=referral\](https://blog.csdn.net/wbiokr/article/details/73027398?utm_source=itdadao&utm_medium=referral]%28https://blog.csdn.net/wbiokr/article/details/73027398?utm_source=itdadao&utm_medium=referral%29\)
 
-\[[http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2\]\(http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2\](http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2]%28http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2\)\)
+\[[http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2\]\(http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2\](http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2]%28http://bbs.reactnative.cn/topic/15/react-react-native-的es5-es6写法对照表/2%29\)
 
