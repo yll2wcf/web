@@ -10,7 +10,7 @@ react-native 调用原生
 ```java
 public class NativeInformationModule extends ReactContextBaseJavaModule {
 
-    private static final String REACT_CLASS = "TransMissonMoudle";
+    private static final String REACT_CLASS = "NativeInformationModule";
     private ReactContext mReactContext;
 
     public TransMissonMoudle(ReactApplicationContext reactContext) {
