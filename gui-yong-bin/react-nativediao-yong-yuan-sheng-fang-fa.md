@@ -105,12 +105,10 @@ export default class ThirdPage extends Component <Props> {
         super(props);
 
         const {navigation} = this.props;
-        let param1 = this.props.navigation.getParam('title'); // 获取第一个参数
-        let param2 = this.props.navigation.getParam('url');
+    
         // 初始状态
         this.state = {
-            title: param1,
-            url: param2,
+        
         };
 
     }
