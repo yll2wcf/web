@@ -1,9 +1,11 @@
 react-native 调用原生
 
-首先在原生里实现代码
+
 
 #注意
  如果你修改了原生代码，我的处理方式是卸载APP重新安装，reload命令只是重新安装的js代码，
+ 
+首先在原生里实现代码
 
 ```java
 public class NativeInformationModule extends ReactContextBaseJavaModule {
