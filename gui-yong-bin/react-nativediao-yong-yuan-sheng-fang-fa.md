@@ -73,8 +73,9 @@ public class TransMissonPackage implements ReactPackage{
 
 ```
 
-```js
+
 #在js里如何调用原生代码
+```js
 
 import React, {Component} from 'react';
 import {
