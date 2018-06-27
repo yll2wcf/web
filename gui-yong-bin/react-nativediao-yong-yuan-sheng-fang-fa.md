@@ -8,20 +8,24 @@ react-native 调用原生
 首先在原生里实现代码
 
 ```java
-public class NativeInformationModule extends ReactContextBaseJavaModule {
+public class NativeInformationModule extends ReactContextBaseJavaModule  {
 
+    public List<LocalMedia> selectList = new ArrayList<>();
     private static final String REACT_CLASS = "NativeInformationModule";
-    private ReactContext mReactContext;
-
-    public TransMissonMoudle(ReactApplicationContext reactContext) {
-        super(reactContext);
-        this.mReactContext = reactContext;
-    }
+    private static ReactContext mReactContext;
+    int CHOOSE_REQUEST = 188;
 
     @Override
     public String getName() {
         return REACT_CLASS;
     }
+
+
+    public NativeInformationModule(ReactApplicationContext reactContext) {
+        super(reactContext);
+        this.mReactContext = reactContext;
+    }
+
 
     @ReactMethod
     public void nativeToast() {
@@ -29,7 +33,69 @@ public class NativeInformationModule extends ReactContextBaseJavaModule {
         Toast.makeText(mReactContext, "调用原生吐司", Toast.LENGTH_SHORT).show();
 
     }
-   
+
+    private Callback callback;
+    /**
+     * package com.facebook.react.bridge;   Callback 来自这个包
+     */
+    @ReactMethod
+    public void callBackPic(String name, Callback callback) {
+        this.callback = callback;
+        RxPermissions rxPermissions = new RxPermissions(mReactContext.getCurrentActivity());
+
+        rxPermissions.request(Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA).subscribe(new Observer<Boolean>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(Boolean aBoolean) {
+                if (aBoolean) {
+                    PictureSelector.create(mReactContext.getCurrentActivity()).openGallery(PictureMimeType.ofImage())
+                            .maxSelectNum(1)// 最大图片选择数量
+                            .minSelectNum(0)
+                            //       .selectionMode(MULTIPLE)//多选
+                            .previewImage(true)//是否可以预览图片
+                            .isCamera(true)// 是否显示拍照按钮 ture or false
+                            .selectionMedia(selectList)
+                            .forResult(CHOOSE_REQUEST);
+
+                }
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
+
+
+
+    }
+
+
+
+
+    /**
+     * 用来给原生的方法调用，给rn界面发送数据的
+     * @param eventName
+     * @param params
+     */
+    public static void sendTransMisson( String eventName, @javax.annotation.Nullable WritableMap params) {
+        mReactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                .emit(eventName, params);
+
+    }
+
+
 
 }
 ```
@@ -72,6 +138,53 @@ public class TransMissonPackage implements ReactPackage{
 
 
 ```
+```java
+
+public class MainActivity extends ReactActivity {
+
+    /**
+     * Returns the name of the main component registered from JavaScript.
+     * This is used to schedule rendering of the component.
+     */
+    @Override
+    protected String getMainComponentName() {
+        return "TestRN";
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+
+    }
+
+//打开相册的结果回调
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            switch (requestCode) {
+                case PictureConfig.CHOOSE_REQUEST:
+
+                    List<LocalMedia> selectList = PictureSelector.obtainMultipleResult(data);
+                    if (selectList != null && selectList.size() > 0) {
+                        LocalMedia localMedia = selectList.get(0);
+                        String path = localMedia.getPath();
+                        WritableMap writableMap=new WritableNativeMap();
+                        writableMap.putString("path",path);
+
+                        Log.e("tagString1",path);
+                        //将回调的照片路径传给rn页面
+                        NativeInformationModule.sendTransMisson("EventGetPic",writableMap);
+
+                    }
+                    break;
+            }
+        }
+    }
+}
+
+```
+
+
 
 
 #在js里如何调用原生代码
@@ -97,7 +210,20 @@ type
 Props = {};
 export default class ThirdPage extends Component <Props> {
 
+    componentWillMount() {
+        DeviceEventEmitter.addListener('EventGetPic', this._OnPicSelected.bind(this));
+    }
 
+    //获取原生回调的结果
+    _OnPicSelected(msg) {
+        console.log(msg);
+        if (msg && msg.path) {
+            ToastAndroid.show("照片路径:" + "\n" + msg.path, ToastAndroid.LONG);
+            this.setState({//更改状态要用setState方法
+                title:'file:///'+ msg.path,//加载了一张本地相册的图片
+            })
+        }
+    }
 
 
     //构造
@@ -105,10 +231,12 @@ export default class ThirdPage extends Component <Props> {
         super(props);
 
         const {navigation} = this.props;
-    
+        let param1 = this.props.navigation.getParam('title'); // 获取第一个参数
+        let param2 = this.props.navigation.getParam('url');
         // 初始状态
         this.state = {
-        
+            title: param1,
+            url: param2,
         };
 
     }
@@ -119,7 +247,7 @@ export default class ThirdPage extends Component <Props> {
 
         return (
             <View style={styles.container}>
-                <Text>第二{this.state.title}</Text>
+                <Text>第三{this.state.title}</Text>
                 <View>
                     <TouchableOpacity style={styles.touchStyle} onPress={()=>{this._jumpToIndex();} }>
                         <Text style={styles.touchText}>
@@ -137,21 +265,44 @@ export default class ThirdPage extends Component <Props> {
 
                     </TouchableOpacity>
                 </View>
-           
+                <View>
+                    <TouchableOpacity style={styles.touchStyle}
+                                      onPress={()=>{this._openGallery();} }>
+                        <Text style={styles.touchText}>
+                            打开相册
+                        </Text>
+
+                    </TouchableOpacity>
+                </View>
+
+
+                <Image style={styles.viewImageStyle}
+                       source={{uri:this.state.title}}
+                       resizeMode="cover"/>
+
+
             </View>
         )
     }
 
-
+    //跳回第二页
     _jumpToIndex() {
         this.props.navigation.navigate('second');
     }
 
-   
+    //打开原生的相机
+    _openGallery() {
+        NativeModules.NativeInformationModule.callBackPic("Pic",
+            (msg)=> {
+                if (msg) {
+                    ToastAndroid.show(msg.toString(), ToastAndroid.SHORT)
+                }
 
+            });
+    }
+
+    //调用原生吐司
     nativeToast1() {
-        //  ToastAndroid.show("非原生" , ToastAndroid.SHORT)
-
         NativeModules.NativeInformationModule.nativeToast();
     }
 
