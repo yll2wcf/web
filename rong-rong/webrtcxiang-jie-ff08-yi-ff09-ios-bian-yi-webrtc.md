@@ -90,12 +90,22 @@ $gclinet sync
 ####三. 编译成可使用的Framework
 这里的编译过程就和普通编译framework的方式一样，由于篇幅有限就不多介绍了，这里主要介绍一些可能遇到的问题，供大家参考。
 
+将WebRTC.framework导入工程后，运行会报错：
 
+dyld: Library not loaded: @rpath/WebRTC.framework/WebRTC  Referenced from: /Users/MFJun/Library/Developer/CoreSimulator/Devices/4441D192-28A0-46AF-9CA9-C8945BB3442C/data/Containers/Bundle/Application/34E51961-4516-4478-AA59-579342D8D3A5/WebScoketTest.app/WebScoketTest  Reason: image not found 
 
+仔细看错误原因，是没有找到framework文件包，解决方法是：
+TARGETS -> Build Phases -> New Copy Files
+![](/assets/03.png)
 
+接着再点击下面+号，选择自定义的framework
+![](/assets/04.png)
 
+在arm64的环境下，运行会报错
+![](/assets/05.png)
 
+把TARGETS -> Build Settings -> Enable Bitcode设置为NO
+![](/assets/06.png)
 
-
-
+最后，Build Success！
 
