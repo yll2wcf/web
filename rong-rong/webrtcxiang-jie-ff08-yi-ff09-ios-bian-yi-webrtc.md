@@ -4,7 +4,7 @@ webRTC（Web Real-Time Communication）是实现实时语音对话或视频对�
 
 使用webRTC技术前，需要在本地搭建webRTC环境、编译代码等一系列的操作，本文主要介绍iOS鍴如何对其进行编译。iOS编译需要以下几个步骤：
 
-####一.前期准备
+####一. 前期准备
 #####1.安装 Git
 * 下载：http://code.google.com/p/git-osx-installer/
 * 创建一个全局用户名、全局邮箱作为配置信息
@@ -49,3 +49,25 @@ d. 使PATH设置生效:source ~/.bash_profile
 e. echo $PATH查看设置是否生效。
 
 至此我们已经完成了所有前期准备工作，下面开始正式获取WebRTC源码。
+
+####二. 获取WebRTC源码
+#####1. 创建目录
+在我们的编译工作目录webrtc_build下创建一个webtrtc子目录来存放代码：
+
+```
+mkdir webrtc  
+cd webrtc
+
+```
+#####2. 获取源码
+
+```
+fetch --nohooks webrtc_ios 
+gclient sync
+```
+
+漫长的代码下载后能会获取到一个src文件目录，如下图
+
+![](/assets/屏幕快照 2018-06-14 上午11.13.37.png)
+
+
