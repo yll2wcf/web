@@ -36,4 +36,5 @@
   * [码率（Bitrate）、帧数（FPS）、分辨率在视频传输中的含义及其影响](sun-ming-li/Bitrate-FPS-Resolution-in-Video-Transimition.md)
   * [深入浅出了解frame和bounds](sun-ming-li/learning-frame-and-bounds.md)
   * [React Native学习笔记（五）—— React Native的ES5、ES6写法对照](react-nativexue-xi-bi-ji-ff08-wu-ff09-2014-2014-react-native-de-es5-es6-xie-fa-dui-zhao.md)
+  * [React Native 学习笔记（二）—— React Native基础概念](sun-ming-li/react-native-xue-xi-bi-ji-ff08-er-ff09-2014-2014-react-native-ji-chu-gai-nian.md)
 
