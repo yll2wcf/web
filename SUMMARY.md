@@ -43,5 +43,5 @@
   * [React-Native 学习笔记-搭建开发环境](sun-jia-yu/react-native-xue-xi-bi-8bb0-da-jian-kai-fa-huan-jing.md)
   * [React-Native 学习笔记-生命周期](sun-jia-yu/react-native-xue-xi-bi-8bb0-sheng-ming-zhou-qi.md)
   * [React-Native 学习笔记-调用iOS原生方法](sun-jia-yu/react-native-xue-xi-bi-8bb0-diao-yong-ios-yuan-sheng-fang-fa.md)
-  * React-Native 学习笔记-总结
+  * [React-Native 学习笔记-总结](sun-jia-yu/react-native-xue-xi-bi-8bb0-zong-jie.md)
 
