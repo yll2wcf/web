@@ -2,7 +2,7 @@
 
     在recyclerview上可以显示不同种类的数据，我们可以轻易的将它区分开。如果要做成同一种数据用同种分割线，不同种类的数据用更粗一点的分割线分开，如果做到？
     这里我们需要复写RecyclerView.ItemDecoration；
-    ```java
+```java
     public class DifferentDataDividerItemDecoration extends RecyclerView.ItemDecoration {
 
 
@@ -146,13 +146,12 @@
 
 使用的时候
 
-```java
+```abz
  mDecoration = new DifferentDataDividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST);
     mDecoration.setNeedHeighterPosition(2);//如果这里写2，第三个条目的分割线会啊变粗，可以根据需求定制位置
     
                 mRv.addItemDecoration(mDecoration);
  
-
 ```
 
 
