@@ -28,6 +28,7 @@
   * [3.0版本以后命名apk](gui-yong-bin/30ban-ben-yi-hou-ming-ming-apk.md)
   * [react-native调用原生方法](gui-yong-bin/react-nativediao-yong-yuan-sheng-fang-fa.md)
   * [recyclerview加载不同分割线](gui-yong-bin/recyclerviewjia-zai-bu-tong-fen-ge-xian.md)
+  * [react-native this的概念](gui-yong-bin/react-native-thisde-gai-nian.md)
 * [孙明丽](sun-ming-li.md)
   * [React Native学习笔记（一）—— React Native环境安装与应用创建](sun-ming-li/React-Native-Learning-Notes-1.md)
   * [React Native学习笔记（三）—— 模拟器的安装与代码调试](sun-ming-li/React-Native-Learning-Notes-3.md)
