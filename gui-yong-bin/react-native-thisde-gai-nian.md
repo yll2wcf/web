@@ -18,7 +18,7 @@ a();
 
 
 ```js
-  function a(){
+function a(){
        var user = "追梦子";
        console.log(this.user); //undefined
        console.log(this);　　//Window
@@ -26,3 +26,20 @@ a();
 window.a();
 
 ```
+  显然当前调用a()的是window,那么this就是指的是当前界面。
+  
+```js
+var o = {
+    user:"追梦子",
+    fn:function(){
+        console.log(this.user);  //追梦子
+    }
+}
+o.fn();
+
+```
+  O是个对象，并且O调用了fn，this 就是O,O里有user.
+
+
+
+
