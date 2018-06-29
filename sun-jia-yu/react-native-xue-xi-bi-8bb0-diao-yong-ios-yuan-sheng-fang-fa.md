@@ -52,7 +52,8 @@ RCT_EXPORT_MODULE();
 
 2、Promise
 
->`#pragma mark - Promise`// 导出方法，桥接到js的方法返回值类型必须是void/*有两个回调，一个为正确的，一个为error*/
+>`pragma mark - Promise`
+// 导出方法，桥接到js的方法返回值类型必须是void/*有两个回调，一个为正确的，一个为error*/
 `RCT_REMAP_METHOD(testPromisesEvent,name:(NSString *)testStr`
                 ` resolver:(RCTPromiseResolveBlock)resolve`
             `     rejecter:(RCTPromiseRejectBlock)reject)`
