@@ -20,7 +20,9 @@
 
 连接服务器
 >>将您在上一步获取到的 Token，通过 RCIM 的单例，传入 -connectWithToken:success:error:tokenIncorrect: 方法，即可建立与服务器的连接。
-例：```Objetc-C[[RCIM sharedRCIM] connectWithToken:@"YourTestUserToken"     success:^(NSString *userId) {
+例：
+```Objective-C
+[[RCIM sharedRCIM] connectWithToken:@"YourTestUserToken"     success:^(NSString *userId) {
     NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
 } error:^(RCConnectErrorCode status) {
     NSLog(@"登陆的错误码为:%d", status);
@@ -29,7 +31,8 @@
     //如果设置了token有效期并且token过期，请重新请求您的服务器获取新的token
     //如果没有设置token有效期却提示token错误，请检查您客户端和服务器的appkey是否匹配，还有检查您获取token的流程。
     NSLog(@"token错误");
-}];```
+}];
+```
 
 会话列表
 >>融云 IMKit 已经实现了一个默认的会话列表视图控制器，您直接使用或继承 RCConversationListViewController，即可快速启动和使用会话列表界面。    如下面的例子，新建一个 YourTestChatViewController Class，继承于 RCConversationListViewController。新建会话列表 View Controller新建一个继承于 YourTestChatViewController 的 Class，在 viewDidLoad 中设置需要显示的会话类型，需要将哪些类型的会话聚合显示。
