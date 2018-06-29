@@ -21,7 +21,7 @@
 连接服务器
 >>将您在上一步获取到的 Token，通过 RCIM 的单例，传入 -connectWithToken:success:error:tokenIncorrect: 方法，即可建立与服务器的连接。
 例：
-```Objective-C
+```Object-C
 [[RCIM sharedRCIM] connectWithToken:@"YourTestUserToken"     success:^(NSString *userId) {
     NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
 } error:^(RCConnectErrorCode status) {
