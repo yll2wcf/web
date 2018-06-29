@@ -1,6 +1,6 @@
 用react-native完成一个listview
 
-```js
+```
 
 
 import React, { Component, } from 'react';

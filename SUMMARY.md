@@ -18,8 +18,6 @@
   * [深入列表\(一\),RecycleView ListView 使用对比](yue-quan-chen/recycleview-xiang-jie.md)
   * [深入列表\(二\),RecycleView 基本原理](yue-quan-chen/shen-ru-lie-886828-4e8c292c-recycleview-ji-ben-yuan-li.md)
   * [深入列表\(三\),RecycleView ListView 缓存对比](yue-quan-chen/shen-ru-lie-886828-4e09292c-recycleview-listview-huan-cun-dui-bi.md)
-* [孙家宇](sun-jia-yu.md)
-  * [融云IMKit的集成与使用（iOS版）](sun-jia-yu/rong-yun-imkit-de-ji-cheng-yu-shi-yong-ff08-ios-ban-ff09.md)
 * [贵永斌](gui-yong-bin.md)
   * [集成融云](gui-yong-bin/ji-cheng-rong-yun.md)
   * [集成融云群组聊天](gui-yong-bin/ji-cheng-rong-yun-qun-zu-liao-tian.md)
@@ -38,4 +36,6 @@
   * [深入浅出了解frame和bounds](sun-ming-li/learning-frame-and-bounds.md)
   * [React Native学习笔记（五）—— React Native的ES5、ES6写法对照](react-nativexue-xi-bi-ji-ff08-wu-ff09-2014-2014-react-native-de-es5-es6-xie-fa-dui-zhao.md)
   * [React Native 学习笔记（二）—— React Native基础概念](sun-ming-li/react-native-xue-xi-bi-ji-ff08-er-ff09-2014-2014-react-native-ji-chu-gai-nian.md)
+* [孙家宇](sun-jia-yu.md)
+  * [融云IMKit的集成与使用](sun-jia-yu/rong-yun-imkit-de-ji-cheng-yu-shi-yong.md)
 
