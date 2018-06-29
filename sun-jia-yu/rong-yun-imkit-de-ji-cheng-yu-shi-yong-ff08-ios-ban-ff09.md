@@ -58,16 +58,16 @@
 }
 @end
 
-初始化会话列表界面并显示
+>>初始化会话列表界面并显示
 生成会话列表 View Controller 对象，并显示。
 
 例：YourTestChatListViewController *chatList = [[YourTestChatListViewController alloc] init];
 [self.navigationController pushViewController:chatList animated:YES];
 
-点击会话列表，进入聊天会话界面
+>>点击会话列表，进入聊天会话界面
 在您的会话列表 View Controller 中加入以下代码，即可点击进入聊天会话界面。
 
-例：//重写RCConversationListViewController的onSelectedTableRow事件
+>>例：//重写RCConversationListViewController的onSelectedTableRow事件
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType
          conversationModel:(RCConversationModel *)model
                atIndexPath:(NSIndexPath *)indexPath {
@@ -80,12 +80,19 @@
 
 会话页面
 >>融云 IMKit 中已经实现了完整的会话页面，包含发送、接收、更新等 UI，并覆盖常用的 IM 交互场景，您直接使用或继承 RCConversationViewController，即可快速启动和使用会话页面。
-如下面的例子，创建一个 RCConversationViewController 对象并设置好会话类型、目标会话 ID，显示即可进行聊天。
-//新建一个聊天会话View Controller对象,建议这样初始化
+如下面的例子，创建一个 `RCConversationViewController` 对象并设置好会话类型、目标会话 ID，显示即可进行聊天。
+//新建一个聊天会话`View Controller`对象,建议这样初始化
+
+```
 RCConversationViewController *chat = [RCConversationViewController alloc] initWithConversationType:conversationType
                     targetId:targetId];
 
-//设置会话的类型，如单聊、群聊、聊天室、客服、公众服务会话等
+```
+
+
+>//设置会话的类型，如单聊、群聊、聊天室、客服、公众服务会话等
+
+```
 chat.conversationType = ConversationType_PRIVATE;
 //设置会话的目标会话ID。（单聊、客服、公众服务会话为对方的ID，群聊、聊天室为会话的ID）
 chat.targetId = @"targetIdYouWillChatIn";
@@ -94,6 +101,9 @@ chat.targetId = @"targetIdYouWillChatIn";
 chat.title = @"想显示的会话标题";
 //显示聊天会话界面
 [self.navigationController pushViewController:chat animated:YES];
+
+```
+
 
 根据步骤做到这里就完成融云的基本聊天功能了，下面介绍一下我在集成融云的时候遇到的难点与解决方法，希望可以帮助到大家。
 ##二、可能出现的问题
