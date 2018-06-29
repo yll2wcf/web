@@ -17,10 +17,11 @@ a();
 这里没有人明确的调用a(),或者说调用a()的是当前的这个界面，那么this就是指当前这个界面，而当前界面里没有user,所以是undefined.
 
 ```js
-function a(){
-    var user = "追梦子";
-    console.log(this.user); //undefined
-    console.log(this);　　//Window
-}
+  function a(){
+       var user = "追梦子";
+       console.log(this.user); //undefined
+       console.log(this);　　//Window
+ }
 window.a();
+
 ```
