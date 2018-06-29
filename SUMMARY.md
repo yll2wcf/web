@@ -38,4 +38,10 @@
   * [React Native 学习笔记（二）—— React Native基础概念](sun-ming-li/react-native-xue-xi-bi-ji-ff08-er-ff09-2014-2014-react-native-ji-chu-gai-nian.md)
 * [孙家宇](sun-jia-yu.md)
   * [融云IMKit的集成与使用](sun-jia-yu/rong-yun-imkit-de-ji-cheng-yu-shi-yong.md)
+  * [React Native学习笔记-React Native原生模块与JS模块通信的几种方式](sun-jia-yu/react-nativexue-xi-bi-8bb0-react-native-yuan-sheng-mo-kuai-yu-js-mo-kuai-tong-xin-de-ji-zhong-fang-shi.md)
+  * [React-Native 学习笔记-flex布局](sun-jia-yu/react-native-xue-xi-bi-8bb0-flex-bu-ju.md)
+  * [React-Native 学习笔记-搭建开发环境](sun-jia-yu/react-native-xue-xi-bi-8bb0-da-jian-kai-fa-huan-jing.md)
+  * [React-Native 学习笔记-生命周期](sun-jia-yu/react-native-xue-xi-bi-8bb0-sheng-ming-zhou-qi.md)
+  * [React-Native 学习笔记-调用iOS原生方法](sun-jia-yu/react-native-xue-xi-bi-8bb0-diao-yong-ios-yuan-sheng-fang-fa.md)
+  * React-Native 学习笔记-总结
 
