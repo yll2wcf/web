@@ -47,4 +47,6 @@
   * [React-Native 学习笔记-生命周期](sun-jia-yu/react-native-xue-xi-bi-8bb0-sheng-ming-zhou-qi.md)
   * [React-Native 学习笔记-调用iOS原生方法](sun-jia-yu/react-native-xue-xi-bi-8bb0-diao-yong-ios-yuan-sheng-fang-fa.md)
   * [React-Native 学习笔记-总结](sun-jia-yu/react-native-xue-xi-bi-8bb0-zong-jie.md)
+* 李杰
+  * [native集成react-native时react-navigation注意事项](nativeji-cheng-react-native-shi-react-navigation-zhu-yi-shi-xiang.md)
 
