@@ -1,12 +1,12 @@
 # GitLab的优点：Integrated teams working together
 
-### GitLab是第一个针对产品，开发，QA，安全和运营团队的DevOps生命周期的所有阶段构建的单一应用程序，可以在同一个项目上同时工作。
+#### GitLab是第一个针对产品，开发，QA，安全和运营团队的DevOps生命周期的所有阶段构建的单一应用程序，可以在同一个项目上同时工作。
 
-### GitLab使团队能够通过单个对话进行协作和工作，而不是跨不同的工具管理多个线程。
+#### GitLab使团队能够通过单个对话进行协作和工作，而不是跨不同的工具管理多个线程。
 
-### GitLab在DevOps生命周期内为团队提供单一数据存储，一个用户界面和一个权限模型，允许团队进行协作，显着缩短周期时间，并专注于快速构建优秀软件。
+#### GitLab在DevOps生命周期内为团队提供单一数据存储，一个用户界面和一个权限模型，允许团队进行协作，显着缩短周期时间，并专注于快速构建优秀软件。
 
-### [installation doc](https://about.gitlab.com/installation/#)
+#### [installation doc](https://about.gitlab.com/installation/#)
 
 #### 这里以CentOS 7为例
 
@@ -48,7 +48,7 @@ sudo systemctl start postfix
 curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
 ```
 
-接下来，安装GitLab包。将'http://gitlab.example.com'更改为您要访问GitLab实例的URL。安装将自动配置并启动该URL的GitLab。HTTPS在安装后需要[其他配置](https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https)。
+接下来，安装GitLab包。将'[http://gitlab.example.com'更改为您要访问GitLab实例的URL。安装将自动配置并启动该URL的GitLab。HTTPS在安装后需要\[其他配置\]\(https://docs.gitlab.com/omnibus/settings/nginx.html\#enable-https\)。](http://gitlab.example.com'更改为您要访问GitLab实例的URL。安装将自动配置并启动该URL的GitLab。HTTPS在安装后需要[其他配置]%28https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https%29。)
 
 ```
 sudo EXTERNAL_URL="http://gitlab.example.com" yum install -y gitlab-ee
