@@ -46,5 +46,40 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 最后一步是将您的公共SSH密钥添加到GitLab。
 
+![](/assets/lj9.png)
+
+我们添加SSH Key后就可以正常拉取项目了
+
+在这里推荐使用SourceTree用来管理git项目
+
+![](/assets/lj10.png)
+
+![](/assets/lj11.png)
+
+这里我们填入git地址
+
+![](/assets/lj12.png)
+
+会要求我们输入用户名密码，这里我们输入登陆gtilab的用户密码就可以
+
+clone后，我们的项目就被拉取到了本地  
+![](/assets/lj13.png)
+
+关于权限的分配，我们在menbers下进行分配
+
+![](/assets/lj14.png)
+
+不同的身份，权限不同，[在这里可以查看身份对应的权限](http://172.26.1.194/help/user/permissions)
+
+如果每一个项目都要设置一次权限就非常不又好了，所以我们可以利用group
+
+![](/assets/lj15.png)创建了group后，未来我们的项目在创建时可以都选择创建在group下
+
+![](/assets/lj16.png)
+
+这样组内的成员都具有了查看这个项目的权限，我们只需要再修改组内成员的权限即可。
+
+这些只是gitlab的冰山一角，gitlab还具有，插件，持续集成，及时部署等功能。
+
 
 
