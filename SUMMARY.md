@@ -18,6 +18,7 @@
   * [深入列表\(一\),RecycleView ListView 使用对比](yue-quan-chen/recycleview-xiang-jie.md)
   * [深入列表\(二\),RecycleView 基本原理](yue-quan-chen/shen-ru-lie-886828-4e8c292c-recycleview-ji-ben-yuan-li.md)
   * [深入列表\(三\),RecycleView ListView 缓存对比](yue-quan-chen/shen-ru-lie-886828-4e09292c-recycleview-listview-huan-cun-dui-bi.md)
+  * [Android 状态栏那些事](yue-quan-chen/android-zhuang-tai-lan-na-xie-shi.md)
 * [贵永斌](gui-yong-bin.md)
   * [集成融云](gui-yong-bin/ji-cheng-rong-yun.md)
   * [集成融云群组聊天](gui-yong-bin/ji-cheng-rong-yun-qun-zu-liao-tian.md)
