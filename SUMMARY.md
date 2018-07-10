@@ -50,4 +50,5 @@
 * 李杰
   * [native集成react-native时react-navigation注意事项](nativeji-cheng-react-native-shi-react-navigation-zhu-yi-shi-xiang.md)
   * [gitlab安装](gitlaban-zhuang.md)
+  * [gitlab使用](gitlabshi-yong.md)
 
