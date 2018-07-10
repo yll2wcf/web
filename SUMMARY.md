@@ -49,4 +49,5 @@
   * [React-Native 学习笔记-总结](sun-jia-yu/react-native-xue-xi-bi-8bb0-zong-jie.md)
 * 李杰
   * [native集成react-native时react-navigation注意事项](nativeji-cheng-react-native-shi-react-navigation-zhu-yi-shi-xiang.md)
+  * [gitlab安装](gitlaban-zhuang.md)
 
