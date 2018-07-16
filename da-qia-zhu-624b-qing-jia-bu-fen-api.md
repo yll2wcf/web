@@ -14,5 +14,9 @@ navigation.navigate('LeaveDetail',{
 | :--- | :--- | :--- | :--- |
 | LeaveDetail | 请假id | 请假人名称 | 回调刷新函数 |
 
+---
+
+## Native
+
 
 
