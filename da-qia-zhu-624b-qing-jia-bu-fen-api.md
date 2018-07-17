@@ -20,6 +20,8 @@ navigation.navigate('LeaveDetail',{
 
 ## Native
 
+* ### native端跳转react native界面时，携带参数统一`PARAMS`，是字符型json。如`bundle("PARAMS","{"id":1,"name":"test","photo":"xxx.png"}")`
+
 #### 请假混合审批界面：
 
 | `moduleName` or `HeadlessJsTaskConfig.TaskName` | initialProperties |
@@ -48,12 +50,6 @@ navigation.navigate('LeaveDetail',{
 | :--- | :--- | :---: | :---: |
 | leave\_id | string/number | 请假id | required |
 | name | string | 请假人名称 | optional |
-
-
-
-
-
-
 
 
 
