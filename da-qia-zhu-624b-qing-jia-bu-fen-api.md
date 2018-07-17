@@ -49,7 +49,5 @@ navigation.navigate('LeaveDetail',{
 | leave\_id | string/number | 请假id | required |
 | name | string | 请假人名称 | optional |
 
- 
-
 
 
