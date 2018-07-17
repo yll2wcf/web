@@ -38,5 +38,19 @@ navigation.navigate('LeaveDetail',{
 | name | string | 审批人名称 | required |
 | portraitUri | string | 审批人头像 | required |
 
+#### 请假详情：
+
+| `moduleName` or `HeadlessJsTaskConfig.TaskName` |
+| :--- |
+| `LeaveDetail` |
+
+| parmas | type | description | required/optional |
+| :--- | :--- | :---: | :---: |
+| leave_id | string/number | 审批人id | required |
+| name | string | 审批人名称 | required |
+| portraitUri | string | 审批人头像 | required |
+
+
+
 
 
