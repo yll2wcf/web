@@ -27,6 +27,7 @@ approver.navigate('LeaveDetail',{
 | `moduleName` or `HeadlessJsTaskConfig.TaskName` | initialProperties |
 | :--- | :--- |
 | `AddLeaveManager` | `null` |
+---
 
 #### 只能请假界面：
 
@@ -34,13 +35,17 @@ approver.navigate('LeaveDetail',{
 | :--- | :--- |
 | `AddLeave` | approver （如下） |
 
-#### approver：
+
+
+#### `approver`:
 
 | parmas | type | description | required/optional |
 | :--- | :--- | :---: | :---: |
 | employee\_id | string/number | 审批人id | required |
 | name | string | 审批人名称 | required |
 | photo | number | 审批人头像 | required |
+
+---
 
 #### 请假详情界面：
 
