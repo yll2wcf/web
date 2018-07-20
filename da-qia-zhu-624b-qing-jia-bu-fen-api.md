@@ -3,7 +3,7 @@
 #### 请假详情:
 
 ```jsx
-approver.navigate('LeaveDetail',{
+navigation.navigate('LeaveDetail',{
     leave_id: item.leave_id,
     name: item.leave_user_name,
     refresh: ()=>{
@@ -27,6 +27,7 @@ approver.navigate('LeaveDetail',{
 | `moduleName` or `HeadlessJsTaskConfig.TaskName` | initialProperties |
 | :--- | :--- |
 | `AddLeaveManager` | `null` |
+
 ---
 
 #### 只能请假界面：
@@ -34,8 +35,6 @@ approver.navigate('LeaveDetail',{
 | `moduleName` or `HeadlessJsTaskConfig.TaskName` | PARAMS |
 | :--- | :--- |
 | `AddLeave` | approver （如下） |
-
-
 
 #### `approver`:
 
