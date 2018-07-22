@@ -54,4 +54,5 @@
   * [打卡助手-请假部分api](da-qia-zhu-624b-qing-jia-bu-fen-api.md)
   * [低版本react-native升级填坑记录](di-ban-benreact-native-sheng-ji-tian-keng-ji-lu.md)
   * [codepush备注](codepushbei-zhu.md)
+  * [react-native编译导出bundle](react-nativebian-yi-dao-chu-bundle.md)
 
