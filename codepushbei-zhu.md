@@ -14,3 +14,5 @@ code-push release-react dakaIOS ios --plistFile ./ios/DaKaNew/Info.plist -m --de
 
 `bundleName` : 编译导出的bundle名称（要与bundle名称设置一直）
 
+`deploymentName` : 默认是Staging，如果要部署到生产环境需要指定为 `Production`
+
