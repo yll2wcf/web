@@ -1,7 +1,7 @@
 ## 打开助手
 
 ```
-code-push release-react dakaIOS ios --plistFile ./ios/DaKaNew/Info.plist -m --description "Modified the header color" --bundleName index.ios.jsbundle
+code-push release-react dakaIOS ios --plistFile ./ios/DaKaNew/Info.plist -m --description "Modified the header color" --bundleName index.ios.jsbundle -d Production
 ```
 
 `appName` : dakaIOS
