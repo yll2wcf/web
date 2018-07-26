@@ -16,3 +16,5 @@ code-push release-react dakaIOS ios --plistFile ./ios/DaKaNew/Info.plist -m --de
 
 `deploymentName` : 默认是Staging，如果要部署到生产环境需要指定为 `Production`
 
+`targetBinaryVersion` : 目标版本 例如 "6.0.0"  or "6.0.0 - 6.0.1"
+
