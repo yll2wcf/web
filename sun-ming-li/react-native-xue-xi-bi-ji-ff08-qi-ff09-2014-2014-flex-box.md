@@ -18,11 +18,7 @@ column-reverse：主轴为垂直方向，起点在下沿。
 
 ##### 3. flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
 
-##### 4. justify-content属性定义了项目在主轴上的对齐方式。
-
-```
- 具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
-```
+##### 4. justify-content属性定义了项目在主轴上的对齐方式。 具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
 
 * flex-start（默认值）：左对齐
 * flex-end：右对齐
@@ -30,11 +26,7 @@ column-reverse：主轴为垂直方向，起点在下沿。
 * space-between：两端对齐，项目之间的间隔都相等
 * space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
 
-##### 5. align-items属性定义在交叉轴上如何对齐。
-
-```
-   假设交叉轴从上到下
-```
+##### 5. align-items属性定义在交叉轴上如何对齐。假设交叉轴从上到下
 
 * flex-start: 交叉轴的起点对齐
 * flex-end: 交叉轴的终点对齐
