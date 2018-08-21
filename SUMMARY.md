@@ -40,6 +40,7 @@
   * [React Native学习笔记（五）—— React Native的ES5、ES6写法对照](react-nativexue-xi-bi-ji-ff08-wu-ff09-2014-2014-react-native-de-es5-es6-xie-fa-dui-zhao.md)
   * [React Native 学习笔记（二）—— React Native基础概念](sun-ming-li/react-native-xue-xi-bi-ji-ff08-er-ff09-2014-2014-react-native-ji-chu-gai-nian.md)
   * [React Native 学习笔记（六）——React Native生命周期](sun-ming-li/react-native-xue-xi-bi-ji-ff08-liu-ff09-2014-2014-react-native-sheng-ming-zhou-qi.md)
+  * [React Native 学习笔记 （七）—— Flex box](sun-ming-li/react-native-xue-xi-bi-ji-ff08-qi-ff09-2014-2014-flex-box.md)
 * [孙家宇](sun-jia-yu.md)
   * [融云IMKit的集成与使用](sun-jia-yu/rong-yun-imkit-de-ji-cheng-yu-shi-yong.md)
   * [React Native学习笔记-React Native原生模块与JS模块通信的几种方式](sun-jia-yu/react-nativexue-xi-bi-8bb0-react-native-yuan-sheng-mo-kuai-yu-js-mo-kuai-tong-xin-de-ji-zhong-fang-shi.md)
