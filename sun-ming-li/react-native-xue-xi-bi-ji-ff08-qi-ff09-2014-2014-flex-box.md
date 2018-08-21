@@ -1,15 +1,11 @@
 #### 一、容器的属性
 
 1. ##### flex-direction决定主轴的方向
-2. row  
-   （默认值）：主轴为水平方向，起点在左端。
 
-3. row-reverse
-   ：主轴为水平方向，起点在右端。
-4. column
-   ：主轴为垂直方向，起点在上沿。
-5. column-reverse
-   ：主轴为垂直方向，起点在下沿。
+* row：主轴为水平方向，起点在左端。
+* row-reverse：主轴为水平方向，起点在右端。
+* column（默认值）：主轴为垂直方向，起点在上沿。
+* column-reverse：主轴为垂直方向，起点在下沿。
 
 ##### 2. flex-wrap 如果一条轴线排不下，如何换行
 
@@ -260,8 +256,6 @@ const styles = StyleSheet.create({
     }
 })
 ```
-
-
 
 参考链接：
 
