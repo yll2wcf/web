@@ -1,5 +1,9 @@
 ###### 请假
 
+- 申请：daka:LeaveMessage；推送提示文字：[请假申请]
+- 中间审批：daka:LeaveTransferMessage；推送提示文字：[请假审批]
+- 审批：daka:LeaveApprovalMessage；推送提示文字：[请假审批]
+
 ``` json
 
 {
@@ -19,6 +23,9 @@
 
 ###### 补卡
 
+- 申请：daka:PatchCardMessage；推送提示文字：[补卡申请]
+- 审批：daka:PatchCardApprovalMessage；推送提示文字：[补卡审批]
+
 ``` json
 
 {
@@ -35,6 +42,8 @@
 
 ###### 用车
 
+- 申请，中间审批，审批：daka:UseCarMessage；推送提示文字：[用车申请]，[用车审批]
+
 ``` json
 
 {
@@ -49,6 +58,8 @@
 ```
 
 ###### 会议室
+
+- 申请，中间审批，审批：daka:UseMeetingRoomMessage；推送提示文字：[会议室预订申请]，[会议室预订审批]
 
 ``` json
 
@@ -66,6 +77,8 @@
 
 ###### 通用
 
+- 申请，中间审批，审批：daka:OthersApplyMessage；推送提示文字：[显示RN传过来的参数apply_title,根据tag拼加字符串'申请'或者'审批']
+
 ``` json
 
 {
@@ -74,7 +87,7 @@
     "tag":1, //1是申请，2是审批，3是中间审批
     "name":"岳泉晨",
     "targetId":"13496",
-    "apply_title":"公文发布申请"
+    "apply_title":"公文发布" //RN只需传递title内容，原生拼加字符串'申请'或者'审批'
 }
 
 
