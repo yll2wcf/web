@@ -5,4 +5,3 @@ Please set ANDROID_SWT to point to the folder containing swt.jar for your platfo
 （1）。set frameworkdir=lib （纠正）==》set frameworkdir=..\lib
 （2）。Dcom.android.monkeyrunner.bindir=..\framework -jar %jarpath% %* （纠正）==》Dcom.android.monkeyrunner.bindir=..\..\platform-tools -jar %jarpath% %*
 
----------------------
