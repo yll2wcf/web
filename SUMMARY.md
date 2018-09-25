@@ -32,6 +32,7 @@
   * [react-native调用原生方法](gui-yong-bin/react-nativediao-yong-yuan-sheng-fang-fa.md)
   * [recyclerview加载不同分割线](gui-yong-bin/recyclerviewjia-zai-bu-tong-fen-ge-xian.md)
   * [react-native this的概念](gui-yong-bin/react-native-thisde-gai-nian.md)
+  * [monkeyrunner   SWT folder '..\framework\x86\_64' does not exist. Please set ANDROID\_SWT to point to the folder conta](gui-yong-bin/monkeyrunner-swt-folder-framework-x8664-does-not-exist-please-set-androidswt-to-point-to-the-folder-conta.md)
 * [孙明丽](sun-ming-li.md)
   * [React Native学习笔记（一）—— React Native环境安装与应用创建](sun-ming-li/React-Native-Learning-Notes-1.md)
   * [React Native学习笔记（三）—— 模拟器的安装与代码调试](sun-ming-li/React-Native-Learning-Notes-3.md)
