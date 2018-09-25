@@ -6,5 +6,3 @@ Please set ANDROID_SWT to point to the folder containing swt.jar for your platfo
 （2）。Dcom.android.monkeyrunner.bindir=..\framework -jar %jarpath% %* （纠正）==》Dcom.android.monkeyrunner.bindir=..\..\platform-tools -jar %jarpath% %*
 
 ---------------------
-
-本文来自 毁灭天君 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq_21650171/article/details/78986788?utm_source=copy 
